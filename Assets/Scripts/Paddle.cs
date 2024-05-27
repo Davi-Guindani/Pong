@@ -15,15 +15,18 @@ public class Paddle : MonoBehaviour
     }
     void Update()
     {
-        if (isPlayer1)
+        if (!PauseMenu.isPaused)
         {
-            movement = Input.GetAxisRaw("Vertical");
+            if (isPlayer1)
+            {
+                movement = Input.GetAxisRaw("Vertical");
+            }
+            else
+            {
+                movement = Input.GetAxisRaw("Vertical2");
+            }
+            rb.velocity = new Vector2(rb.velocity.x, movement * speed);
         }
-        else
-        {
-            movement = Input.GetAxisRaw("Vertical2");
-        }
-        rb.velocity = new Vector2(rb.velocity.x, movement * speed);
     }
     public void Reset()
     {
