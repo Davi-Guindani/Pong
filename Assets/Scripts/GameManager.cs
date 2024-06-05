@@ -6,8 +6,7 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    [Header("Ball")]
-    public GameObject ball;
+    [SerializeField] private Ball ball;
 
     [Header("Player 1")]
     public GameObject player1Paddle;
@@ -38,7 +37,7 @@ public class GameManager : MonoBehaviour
     }
     private void ResetPosition()
     {
-        ball.GetComponent<Ball>().Reset();
+        ball.Reset();
         player1Paddle.GetComponent<Paddle>().Reset();
         player2Paddle.GetComponent<Paddle>().Reset();
     }

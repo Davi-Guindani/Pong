@@ -4,24 +4,26 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public float speed;
-    public Rigidbody2D rb;
-    public Vector3 startPosition;
-    void Start()
+    private float speed = 5;
+    private Vector3 startPosition;
+    [SerializeField] private Rigidbody2D rb;
+    private void Start()
     {
-        startPosition = transform.position;
-        Launch();
+        this.startPosition = this.transform.position;
+        this.Launch();
     }
+
     public void Reset()
     {
-        rb.velocity = Vector2.zero;
-        transform.position = startPosition;
-        Launch();
+        this.rb.velocity = Vector2.zero;
+        this.transform.position = this.startPosition;
+        this.Launch();
     }
+
     private void Launch()
     {
         float x = Random.Range(0, 2) == 0 ? -1 : 1;
         float y = Random.Range(0, 2) == 0 ? -1 : 1;
-        rb.velocity = new Vector2(speed * x, speed * y);
+        this.rb.velocity = new Vector2(this.speed * x, this.speed * y);
     }
 }
