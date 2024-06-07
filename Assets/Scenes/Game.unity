@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4ac062ddff0e7046b5d0e6e146f379b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ball: {fileID: 1393052858}
+  ball: {fileID: 1393052863}
   player1Paddle: {fileID: 161525876}
   player1Goal: {fileID: 375076367}
   player2Paddle: {fileID: 685641226}
@@ -623,6 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer1Goal: 1
+  gm: {fileID: 51949946}
 --- !u!1 &644034159
 GameObject:
   m_ObjectHideFlags: 0
@@ -976,6 +977,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer1Goal: 0
+  gm: {fileID: 51949946}
 --- !u!1 &936708901
 GameObject:
   m_ObjectHideFlags: 0
@@ -1827,9 +1829,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8469e0d8efdf78b46bb56f476149f8af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
   rb: {fileID: 1393052859}
-  startPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &1427545753
 GameObject:
   m_ObjectHideFlags: 0
@@ -2735,7 +2735,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 1853832454}
-  isPaused: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

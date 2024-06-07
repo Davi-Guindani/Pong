@@ -9,36 +9,36 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Ball ball;
 
     [Header("Player 1")]
-    public GameObject player1Paddle;
-    public GameObject player1Goal;
+    [SerializeField] private GameObject player1Paddle;
+    [SerializeField] private GameObject player1Goal;
 
     [Header("Player 2")]
-    public GameObject player2Paddle;
-    public GameObject player2Goal;
+    [SerializeField] private GameObject player2Paddle;
+    [SerializeField] private GameObject player2Goal;
 
     [Header("Score UI")]
-    public GameObject Player1Text;
-    public GameObject Player2Text;
+    [SerializeField] private GameObject Player1Text;
+    [SerializeField] private GameObject Player2Text;
 
     private int Player1Score;
     private int Player2Score;
 
     public void Player1Scored()
     {
-        Player1Score ++;
-        Player1Text.GetComponent<TextMeshProUGUI>().text = Player1Score.ToString();
-        ResetPosition();
+        this.Player1Score ++;
+        this.Player1Text.GetComponent<TextMeshProUGUI>().text = this.Player1Score.ToString();
+        this.ResetPosition();
     }
     public void Player2Scored()
     {
-        Player2Score ++;
-        Player2Text.GetComponent<TextMeshProUGUI>().text = Player2Score.ToString();
-        ResetPosition();
+        this.Player2Score ++;
+        this.Player2Text.GetComponent<TextMeshProUGUI>().text = this.Player2Score.ToString();
+        this.ResetPosition();
     }
     private void ResetPosition()
     {
-        ball.Reset();
-        player1Paddle.GetComponent<Paddle>().Reset();
-        player2Paddle.GetComponent<Paddle>().Reset();
+        this.ball.Reset();
+        this.player1Paddle.GetComponent<Paddle>().Reset();
+        this.player2Paddle.GetComponent<Paddle>().Reset();
     }
 }
