@@ -10,13 +10,11 @@ public class PauseMenu : MonoBehaviour
 
     void Start()
     {
-        Debug.Log("PauseMenu script started");
         pauseMenu.SetActive(false);
     }
 
     void Update()
     {
-        Debug.Log("Update method called");
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             Debug.Log("Escape key pressed");
