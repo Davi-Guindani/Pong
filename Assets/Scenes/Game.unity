@@ -490,6 +490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer1: 1
+  ball: {fileID: 0}
   rb: {fileID: 161525877}
 --- !u!1 &375076367
 GameObject:
@@ -842,6 +843,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer1: 0
+  ball: {fileID: 1393052858}
   rb: {fileID: 685641227}
 --- !u!1 &936224757
 GameObject:

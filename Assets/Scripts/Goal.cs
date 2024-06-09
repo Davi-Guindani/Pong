@@ -14,12 +14,10 @@ public class Goal : MonoBehaviour
         {
             if (!this.isPlayer1Goal)
             {
-                Debug.Log("Player 1 Scored...");
                 this.gm.Player1Scored();
             }
             else
             {
-                Debug.Log("Player 2 Scored...");
                 this.gm.Player2Scored();
             }
         }

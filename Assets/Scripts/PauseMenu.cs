@@ -17,15 +17,12 @@ public class PauseMenu : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
-            Debug.Log("Escape key pressed");
             if (isPaused)
             {
-                Debug.Log("Game is paused, resuming...");
                 ResumeGame();
             }
             else
             {
-                Debug.Log("Game is running, pausing...");
                 PauseGame();
             }
         }
@@ -33,7 +30,6 @@ public class PauseMenu : MonoBehaviour
 
     public void ResumeGame()
     {
-        Debug.Log("Resuming game");
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
@@ -41,7 +37,6 @@ public class PauseMenu : MonoBehaviour
 
     public void PauseGame()
     {
-        Debug.Log("Pausing game");
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
@@ -49,8 +44,9 @@ public class PauseMenu : MonoBehaviour
 
     public void GoToMainMenu() 
     {
-        Debug.Log("Going to main menu");
+        pauseMenu.SetActive(false);
         Time.timeScale = 1f;
+        isPaused = false;
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 }

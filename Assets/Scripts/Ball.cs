@@ -51,6 +51,5 @@ public class Ball : MonoBehaviour
         Vector2 currentVelocity = rb.velocity;
         Vector2 newVelocity = currentVelocity.normalized * this.currentSpeed;
         rb.velocity = newVelocity;
-        Debug.Log("Speed increased to: " + newVelocity.magnitude);
     }
 }
