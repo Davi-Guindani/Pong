@@ -10,7 +10,9 @@ public class Ball : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     private int collisionCount = 0;
     private const int collisionsToIncreaseSpeed = 5;
-    private const float speedIncrementFactor = 1.05f; // 10% increment
+    private const float speedIncrementFactor = 1.05f; // 
+    [SerializeField] private GameObject p1;
+    [SerializeField] private GameObject p2;
 
     private void Start()
     {
@@ -51,5 +53,6 @@ public class Ball : MonoBehaviour
         Vector2 currentVelocity = rb.velocity;
         Vector2 newVelocity = currentVelocity.normalized * this.currentSpeed;
         rb.velocity = newVelocity;
+        this.p1.GetComponent<Paddle>().speed += 0.125f;
     }
 }

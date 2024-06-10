@@ -491,6 +491,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer1: 1
   ball: {fileID: 0}
+  speed: 5
   rb: {fileID: 161525877}
 --- !u!1 &375076367
 GameObject:
@@ -844,6 +845,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPlayer1: 0
   ball: {fileID: 1393052858}
+  speed: 5
   rb: {fileID: 685641227}
 --- !u!1 &936224757
 GameObject:
@@ -1854,6 +1856,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 1393052859}
+  p1: {fileID: 161525876}
+  p2: {fileID: 685641226}
 --- !u!1 &1427545753
 GameObject:
   m_ObjectHideFlags: 0
